@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-uint8array",
-  "version": "0.0.1-pre.3",
+  "version": "0.0.1-pre.4",
   "description": "Minimalist Vite plugin to import files as Uint8Arrays",
   "repository": "git@github.com:kevlened/vite-plugin-uint8array.git",
   "license": "ISC",
