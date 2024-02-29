@@ -5,6 +5,8 @@
   "repository": "git@github.com:kevlened/vite-plugin-uint8array.git",
   "license": "ISC",
   "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
