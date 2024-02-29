@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "rm -rf dist && tsup && cp root.d.ts dist/",
-    "postbuild": "echo '/// <reference path=\"./root.d.ts\" />' >> dist/index.d.ts",
+    "postbuild": "echo '/// <reference types=\"./root.d.ts\" />' >> dist/index.d.ts",
     "test": "npm run build && cd test && vitest run",
     "release": "npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm login && npm publish"
   },
