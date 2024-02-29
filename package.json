@@ -5,16 +5,26 @@
   "repository": "git@github.com:kevlened/vite-plugin-uint8array.git",
   "license": "ISC",
   "type": "module",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "types": [
+        "dist/types.d.ts"
+      ]
     }
   },
   "scripts": {
-    "build": "rm -rf dist && tsup && cp root.d.ts dist/",
-    "postbuild": "echo '/// <reference types=\"./root.d.ts\" />' >> dist/index.d.ts",
+    "build": "rm -rf dist && tsup && cp types.d.ts dist/",
     "test": "npm run build && cd test && vitest run",
     "release": "npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm login && npm publish"
   },
