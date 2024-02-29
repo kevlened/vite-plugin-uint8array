@@ -1,4 +1,4 @@
-`vite-plugin-uint8array` is a minimalist approach to bundling assets as Uint8Arrays by encoding/decoding using base64
+`vite-plugin-uint8array` is a fast-by-default way to bundle assets as Uint8Arrays using base64
 
 ## install
 

@@ -5,10 +5,10 @@ export default function uint8array(): PluginOption {
 	return {
 		name: 'vite-plugin-uint8array',
 		resolveId(id) {
-			if (id === 'virtual:decodeb64') return id
+			if (id === 'virtual:decodeb64') return '\0' + id
 		},
 		load(id) {
-			if (id === 'virtual:decodeb64') return `
+			if (id === '\0virtual:decodeb64') return `
 				export default function decodeb64(b64) {
 					if (typeof Buffer !== 'undefined') {
 						return new Uint8Array(Buffer.from(b64, 'base64'))
